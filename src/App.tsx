@@ -6,27 +6,14 @@ function App() {
   const [count, setCount] = useState(0)
 
   return (
-    <div className="App">
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src="/vite.svg" className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://reactjs.org" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+    <div className="m-12 text-center font-sans font-normal">
+      <button
+        onClick={() => setCount(count + 1)}
+        className="mx-2 rounded-md bg-green-200 px-4"
+      >
+        Welcome to Vite + Tailwind CSS <span className='font-bold font-sans'> {count}</span>
+      </button>
+      {count === 0 ? "Not clicked yet": null}
     </div>
   )
 }
